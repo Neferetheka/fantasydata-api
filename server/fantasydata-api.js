@@ -432,6 +432,14 @@ module.exports = function(options) {
 
     makeRequest(uri, callback);
   }
+  
+   FantasyData.nba.playerDetailsByPlayer = function (playerId, callback) {
+    var uri = buildNbaUrl('Player/{{playerId}}', {
+        playerId: playerId,
+    });
+
+    makeRequest(uri, callback);
+  }
 
   FantasyData.nfl = {};
 
